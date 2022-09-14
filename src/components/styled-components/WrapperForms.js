@@ -18,7 +18,7 @@ const SignIn = styled.div`
         width: 100%;
         min-height: 100vh;
         background-color: #FFFFFF;
-        padding-top: 100px;
+        padding-top: 80px;
     }
     img {
         height: 150px;
@@ -30,15 +30,7 @@ const SignIn = styled.div`
 
 const Wrapper = styled.div`
 
-    &  h1 {
-        font-family: 'Saira Stencil One', cursive;
-        font-size: 45px;
-        font-weight: 400;
-        line-height: 50px;
-        color: #FFFFFF;
-    }
-    
-    input {
+    &  input {
         height: 58px;
         width: 90%;
         border-radius: 5px;
@@ -95,7 +87,7 @@ const Wrapper = styled.div`
         font-weight: 700;
         line-height: 18px;
         text-align: center;
-        color: #FFFFFF;
+        color: #000000;
     }
     
     form {
