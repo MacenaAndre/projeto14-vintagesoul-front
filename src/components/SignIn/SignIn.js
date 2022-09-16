@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { WrapperFormSignIn } from "../styled-components";
+import { WrapperFormAuth } from "../styled-components";
 import { ThreeDots } from "react-loader-spinner";
 import logo from "../../assets/img/Vintage Soul Store.png";
 import { SignInApi } from "../../service/VintageSoulService";
@@ -37,8 +37,14 @@ export default function SignIn() {
 
 	return (
 		<>
-			<WrapperFormSignIn>
-				<img src={logo} alt="logo"></img>
+			<WrapperFormAuth>
+				{!buttonSignIn ? (
+					<Link to={"/"}>
+						<img src={logo} alt="logo"></img>
+					</Link>
+				) : (
+					<img src={logo} alt="logo"></img>
+				)}
 				<form onSubmit={SignInConecction}>
 					<WrapperInput
 						placeholder="E-mail"
@@ -66,11 +72,13 @@ export default function SignIn() {
 					)}
 				</form>
 				{!buttonSignIn ? (
-					<Link to="/sign-up"><p>Primeira Vez? Cadastre-se!</p></Link>
+					<Link to="/sign-up">
+						<p>Primeira Vez? Cadastre-se!</p>
+					</Link>
 				) : (
 					<p>Primeira Vez? Cadastre-se!</p>
 				)}
-			</WrapperFormSignIn>
+			</WrapperFormAuth>
 		</>
 	);
 }

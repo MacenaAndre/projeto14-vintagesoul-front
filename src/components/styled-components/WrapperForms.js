@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-function WrapperFormSignIn({ children }) {
+function WrapperFormAuth({ children }) {
 	return (
 		<SignIn>
 			<Wrapper>{children}</Wrapper>
@@ -24,12 +24,13 @@ const Wrapper = styled.div`
 	width: 100%;
 	min-height: 100vh;
 	background-color: #ffffff;
-	padding-top: 80px;
+	padding-top: 80px;	
 	p {		
 		font-size: 15px;
 		font-weight: 700;
 		line-height: 18px;
-		text-align: center;		
+		text-align: center;	
+		margin-bottom: 40px;	
 	}
 
 	form {
@@ -41,4 +42,4 @@ const Wrapper = styled.div`
 		height: auto;
 	}
 `;
-export { WrapperFormSignIn };
+export { WrapperFormAuth };
