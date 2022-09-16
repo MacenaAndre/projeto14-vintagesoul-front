@@ -1,4 +1,4 @@
-import { WrapperFormSignIn } from "./WrapperForms";
+import { WrapperFormAuth} from "./WrapperForms";
 import { GlobalStyle } from "./GlobalStyle";
 
-export {WrapperFormSignIn, GlobalStyle}
+export {WrapperFormAuth, GlobalStyle}
