@@ -39,5 +39,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MacenaAndre/projeto14-vintagesoul-front.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MacenaAndre/projeto14-vintagesoul-front/issues"
+  },
+  "homepage": "https://github.com/MacenaAndre/projeto14-vintagesoul-front#readme",
+  "description": ""
 }
