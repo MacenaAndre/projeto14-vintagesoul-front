@@ -2,6 +2,19 @@ import axios from "axios";
 
 const BASE_URL = "http://localhost:5000";
 
+function getToken() {
+	const auth = JSON.parse(localStorage.getItem("VintageSoul"));
+	if (auth) {
+		const token = {
+			headers: {
+				Authorization: `Bearer ${auth.token}`,
+			},
+		};
+		return {token, name: auth.name};
+	}
+	return false;
+}
+
 function SignInApi(body) {
     const promise = axios.post(`${BASE_URL}/sign-in`, body);
     return promise;
@@ -12,5 +25,11 @@ function SignUpApi(body) {
     return promise;
 };
 
+function getCart() {
+	const auth = getToken();	
+		const promise = axios.get(`${BASE_URL}/cart`,auth.token );
+		return promise;
+	 
+};
 
-export {SignInApi, SignUpApi};
+export {getToken,SignInApi, SignUpApi, getCart};
