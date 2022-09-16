@@ -32,8 +32,4 @@ function getCart() {
 	 
 };
 
-<<<<<<< HEAD
 export {getToken,SignInApi, SignUpApi, getCart};
-=======
-export {getToken,SignInApi, SignUpApi};
->>>>>>> 5ebe724da9db25f6e79d728755d98f4f1d5fbe33
