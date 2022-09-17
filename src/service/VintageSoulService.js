@@ -32,4 +32,9 @@ function getCart() {
 	 
 };
 
-export {getToken,SignInApi, SignUpApi, getCart};
+function getProduct({idProduct}){
+	const promise = axios.get(`${BASE_URL}/product/:${idProduct}`);
+	return promise;
+}
+
+export {getToken,SignInApi, SignUpApi, getCart, getProduct};
