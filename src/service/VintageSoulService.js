@@ -10,31 +10,30 @@ function getToken() {
 				Authorization: `Bearer ${auth.token}`,
 			},
 		};
-		return {token, name: auth.name};
+		return { token, name: auth.name };
 	}
 	return false;
 }
 
 function SignInApi(body) {
-    const promise = axios.post(`${BASE_URL}/sign-in`, body);
-    return promise;
-};
-
-function SignUpApi(body) {
-    const promise = axios.post(`${BASE_URL}/sign-up`, body);
-    return promise;
-};
-
-function getCart() {
-	const auth = getToken();	
-		const promise = axios.get(`${BASE_URL}/cart`,auth.token );
-		return promise;
-	 
-};
-
-function getProduct({idProduct}){
-	const promise = axios.get(`${BASE_URL}/product/:${idProduct}`);
+	const promise = axios.post(`${BASE_URL}/sign-in`, body);
 	return promise;
 }
 
-export {getToken,SignInApi, SignUpApi, getCart, getProduct};
+function SignUpApi(body) {
+	const promise = axios.post(`${BASE_URL}/sign-up`, body);
+	return promise;
+}
+
+function getCart() {
+	const auth = getToken();
+	const promise = axios.get(`${BASE_URL}/cart`, auth.token);
+	return promise;
+}
+
+function getProduct({idProduct}) {
+	const promise = axios.get(`${BASE_URL}/product/${idProduct}`);
+	return promise;
+}
+
+export { getToken, SignInApi, SignUpApi, getCart, getProduct };
