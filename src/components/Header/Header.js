@@ -8,7 +8,6 @@ export default function Header() {
 	const [userProducts, setUserProducts] = useState([]);
 	const isLogged = getToken();
 	const navigate = useNavigate();
-
 	function logout() {
 		if (window.confirm("Deseja sair da sua conta?")) {
 			window.localStorage.removeItem("VintageSoul");
@@ -40,9 +39,6 @@ export default function Header() {
 						</Link>
 						<h2>{`(${userProducts.length})`}</h2>
 						<p onClick={() => logout()}>L</p>
-							
-							
-						
 					</>
 				) : (
 					<>

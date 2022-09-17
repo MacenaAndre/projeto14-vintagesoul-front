@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { getProductsApi } from "../../service/VintageSoulService";
 import ProductCard from "./ProductCard";
 
+
 export default function Home() {
 	const [productList, setProductList] = useState([]);
 	const [limit, SetLimit] = useState(1);
@@ -40,6 +41,7 @@ export default function Home() {
 						
 				</Products>
 			</WrapperHome>
+
 		</>
 	);
 }
