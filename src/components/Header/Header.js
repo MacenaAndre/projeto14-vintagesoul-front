@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { Cart, LogOut } from "react-ionicons";
 import { Link, useNavigate } from "react-router-dom";
 import { getCart, getToken } from "../../service/VintageSoulService";
-import logo from "../../assets/img/Vintage Soul Store.jpeg";
+import logo from "../../assets/img/logo.jpeg";
 import { useState,useEffect } from "react";
 
 export default function Header() {
@@ -35,18 +34,11 @@ export default function Header() {
 				{isLogged ? (
 					<>
 						<p>Olá, {isLogged.name}</p>
-						<>
 						<Link to={"/checkout"}>
-							<Cart color="white" height="17px" width="17px" />							
+							<p>ck</p>						
 						</Link>
 						<h2>{`(${userProducts.length})`}</h2>
-						</>
-						<LogOut
-							color="white"
-							height="17px"
-							width="17px"
-							onClick={() => logout()}
-						/>
+						<p onClick={() => logout()}>L</p>
 					</>
 				) : (
 					<>
