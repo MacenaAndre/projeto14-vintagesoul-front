@@ -9,7 +9,7 @@ import ProductCard from "./ProductCard";
 
 export default function Home() {
 	const [productList, setProductList] = useState([]);
-	const [limit, SetLimit] = useState(1);
+	let [limit, setLimit] = useState(1);
 
 	useEffect(() => {
 		getProductsApi(limit)
@@ -38,8 +38,12 @@ export default function Home() {
 							price={value.price}
 						/>
 					))}
-						
 				</Products>
+				<ScrollPage>
+					<h1 onClick={() => {if(limit > 0) return setLimit(limit--)}}>Voltar</h1>
+					<h1>{limit}</h1>
+					<h1 onClick={() => setLimit(limit++)}>Pŕoxima</h1>
+				</ScrollPage>
 			</WrapperHome>
 
 		</>
@@ -63,4 +67,16 @@ const Products = styled.div`
 	flex-wrap: wrap;
 	justify-content: center;
 	margin-top: 20px;
+`
+const ScrollPage = styled.div`
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	margin: 40px;
+
+	& h1 {
+		font-weight: 400;
+		color: gray;
+		cursor: pointer;
+	}
 `

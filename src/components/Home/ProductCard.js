@@ -4,7 +4,7 @@ import styled from "styled-components";
 export default function ProductCard({ title, image, genre, price, id }) {
     const navigate = useNavigate();
     const formatedPrice = (price/100).toFixed(2).split(".").join(",");
-    const splitedPrice = (price/300).toFixed(2).split(".").join(",")
+    const splitedPrice = ((price + 1)/300).toFixed(2).split(".").join(",")
 
     return (
         <>
@@ -19,7 +19,7 @@ export default function ProductCard({ title, image, genre, price, id }) {
                     }
                 })}</h2>
                 <h3>R$ {formatedPrice}</h3>
-                <h4>ou 3x R${splitedPrice}</h4>
+                <h4>ou 3x R$ {splitedPrice}</h4>
             </Card>
         </>
     );
@@ -35,6 +35,7 @@ const Card = styled.div`
 	margin: 15px;
 	padding: 10px 5px;
     border-radius: 15px;
+    cursor: pointer;
 
     & img {
         width: 90%;
@@ -51,6 +52,7 @@ const Card = styled.div`
     h2{
         margin-top: 3px;
         font-size: 10px;
+        font-weight: 400;
         color: grey;
         padding-left: 10px;
         width: 100%;
