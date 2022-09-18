@@ -13,7 +13,7 @@ function getToken() {
 		return {token, name: auth.name};
 	}
 	return false;
-}
+};
 
 function SignInApi(body) {
     const promise = axios.post(`${BASE_URL}/sign-in`, body);
