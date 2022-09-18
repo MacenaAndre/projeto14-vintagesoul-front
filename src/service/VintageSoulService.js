@@ -34,7 +34,7 @@ function getCart() {
 	const auth = getToken();	
 		const promise = axios.get(`${BASE_URL}/cart`,auth.token );
 		return promise;
-
 };
 
 export {SignInApi, SignUpApi, getToken, getCart, getProductsApi};
+

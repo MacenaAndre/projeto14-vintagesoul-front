@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { getProductsApi } from "../../service/VintageSoulService";
 import ProductCard from "./ProductCard";
 
+
 export default function Home() {
 	const [productList, setProductList] = useState([]);
 	let [limit, setLimit] = useState(1);
@@ -44,6 +45,7 @@ export default function Home() {
 					<h1 onClick={() => setLimit(limit++)}>Pŕoxima</h1>
 				</ScrollPage>
 			</WrapperHome>
+
 		</>
 	);
 }
